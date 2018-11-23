@@ -1,0 +1,11 @@
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+<div class="form-group">
+  <%= f.label :description %>
+  <%= f.text_field :description, class: "form-control" %>
+</div>
+<div>
+
+  <%= f.association :ingredient, as: :radio_buttons %>
+</div>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>

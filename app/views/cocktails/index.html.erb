@@ -1,0 +1,33 @@
+<body>
+<div class="navbar-wagon">
+  <!-- Logo -->
+  <a href="/cocktails" class="navbar-wagon-brand">
+    <%= image_tag "cocktail.png" %>
+  </a>
+
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+
+
+    <!-- Profile picture with dropdown list -->
+    <div class="navbar-wagon-item">
+
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<div class= "container">
+<h1>Available Cocktails</h1>
+  <% @cocktail.each do |cocktail| %>
+<ul>
+  <li>
+    <%= link_to cocktail.name, cocktail_path(cocktail) %>
+  </li>
+</ul>
+    <% end %>
+<p id="add"><%= link_to "Add a cocktail", new_cocktail_path %></p>
+</div>
+
+</body>
